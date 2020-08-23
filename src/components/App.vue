@@ -5,6 +5,7 @@
 			<OnOff />
 			<Counter />
 			<Minus />
+			<Options />
 		</div>
 	</div>
 </template>
@@ -13,13 +14,15 @@
 import OnOff from "./onoff/OnOff";
 import Counter from "./counter/Counter";
 import Minus from "./minus/Minus";
+import Options from "./options/Options";
 
 export default {
 	name: "app",
 	components: {
 		OnOff,
 		Counter,
-		Minus
+		Minus,
+		Options
 	}
 };
 </script>
