@@ -33,3 +33,14 @@ it("should increase the value of button by one for each trigger", async () => {
 
 	expect(content).toBe(expected);
 });
+
+it("should increase the value of button when triggered to 2", async () => {
+	const wrapper = shallowMount(Counter);
+	const expected = 2;
+
+	const button = wrapper.find("button");
+	await button.trigger("click");
+	let content = wrapper.vm.counter;
+
+	expect(content).toBe(expected);
+});

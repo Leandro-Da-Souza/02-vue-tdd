@@ -40,3 +40,14 @@ it("select should have value of selected option", async () => {
 
 	expect(value).toBe(expected);
 });
+
+test("data model should have the same value as selected", async () => {
+	const wrapper = shallowMount(Options);
+	const options = wrapper.findAll("option");
+	const expected = "E";
+
+	await options.at(4).setSelected();
+	let dataValue = wrapper.vm.selected;
+
+	expect(dataValue).toBe(expected);
+});
